@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { CONTACTLIST } from "../types/CONTACT";
 import ContactComponent from "../components/contactComponent";
+import SearchBar from "../components/searchBar";
 
 const Contacts: NextPage = () => {
     const [contactList, setContactList] = useState<CONTACTLIST>([{
@@ -18,6 +19,8 @@ const Contacts: NextPage = () => {
     }, [])
     return (
         <div className="flex justify-center flex-col h-screen w-1/3 mx-auto ">
+            <SearchBar />
+
             {
                 contactList.map((contactInfo, index) => {
                     return <ContactComponent key={index} contactData={contactInfo}/>

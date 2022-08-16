@@ -18,7 +18,11 @@ const Signup: NextPage = () => {
                 e.preventDefault()
                 setInputValue(e.target.value)
                 console.log(109)
-            }} value={inputValue} />
+            }} value={inputValue} 
+            onKeyUp={(e) => {
+                if (e.key === "Enter") signupHandler()
+            }}
+            />
             <div className="mt-6">
                 <Button variant="outlined" onClick={(e) => {
                     e.preventDefault()
