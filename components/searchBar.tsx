@@ -12,7 +12,7 @@ const SearchBar: NextComponentType = () => {
     }, [inputValue])
     return (
         <TextField type="text" 
-        className="mb-16" 
+        className="mb-16 absolute top-8 w-full" 
         onChange={(e) => {
             e.preventDefault()
             setInputValue(e.target.value)
