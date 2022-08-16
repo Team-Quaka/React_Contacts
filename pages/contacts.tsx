@@ -1,10 +1,18 @@
 import { NextPage } from "next";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { CONTACTLIST } from "../types/CONTACT";
 import ContactComponent from "../components/contactComponent";
 
 const Contacts: NextPage = () => {
-    const [contactList, setContactList] = useState<CONTACTLIST>([])
+    const [contactList, setContactList] = useState<CONTACTLIST>([{
+        firstName: 'saniyar',
+        lastName: 'karami',
+        phoneNumber: '099900790244'
+    }, {
+        firstName: 'negar',
+        lastName: 'amin',
+        phoneNumber: '099900790245'
+    }])
     useEffect(() => {
         console.log('fetch from server and set contactlist')
     }, [])

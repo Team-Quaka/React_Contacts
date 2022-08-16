@@ -7,8 +7,15 @@ interface ComponentsProps {
 
 const ContactComponent = ({contactData}: ComponentsProps) => {
     return (
-        <div>
-            {contactData.firstName}
+        <div className="flex flex-col gap-4 mb-6 border-cyan-500 border-b-4">
+            <div className="text-xl font-medium">
+                <span>{contactData.firstName}</span>
+                <span>{' '}</span>
+                <span>{contactData.lastName}</span>
+            </div>
+            <div className="">
+                <span>{contactData.phoneNumber}</span>
+            </div>
         </div>
     )
 }
